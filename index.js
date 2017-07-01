@@ -13,8 +13,9 @@ var unherit = require('unherit');
 var Parser = require('./lib/parser.js');
 
 /* Expose */
-module.exports = exports = parse;
-exports.Parser = Parser;
+module.exports = {
+  parse, Parser
+};
 
 /**
  * Attacher.
@@ -22,5 +23,5 @@ exports.Parser = Parser;
  * @param {unified} processor - Unified processor.
  */
 function parse(processor) {
-  processor.Parser = unherit(Parser);
+  return unherit(Parser);
 }
