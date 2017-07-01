@@ -21,6 +21,8 @@ exports.Parser = Parser;
  *
  * @param {unified} processor - Unified processor.
  */
-function parse(processor) {
-  processor.Parser = unherit(Parser);
+function parse(options) {
+    var Local = unherit(Parser);
+    Local.prototype.options = xtend(Local.prototype.options, this.data('settings'), options);
+    this.Parser = Local;
 }
