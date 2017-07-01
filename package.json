@@ -1,6 +1,6 @@
 {
   "name": "remark-parse-lc-chat",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Really mangled remark-parse",
   "main": "index.js",
   "repository": "https://github.com/kotborealis/remark-parse-lc-chat",
